@@ -42,7 +42,7 @@ Every @haruhimemoe package is ESM only. On Node they need 22.12 or later.
 
 ## Claude Code plugin
 
-- [claude-plugin](https://github.com/haruhimemoe/claude-plugin): The `haruhime` Claude Code plugin: skills for the osu! API v2, the content rules and official support for osu! tournaments, mappool data and pack keys, the hinai mirror, packs.haruhime.moe and its API, haruhime.moe branding, the @haruhimemoe/ui components, and the @haruhimemoe packages. Install with `/plugin marketplace add haruhimemoe/claude-plugin`, then `/plugin install haruhime@haruhimemoe`.
+- [claude-plugin](https://github.com/haruhimemoe/claude-plugin): The `haruhime` Claude Code plugin: skills for the osu! API v2, the content rules and official support for osu! tournaments, mappool data and pack keys, the hinai mirror, packs.haruhime.moe and its API, haruhime.moe branding, and the @haruhimemoe packages. Install with `/plugin marketplace add haruhimemoe/claude-plugin`, then `/plugin install haruhime@haruhimemoe`.
 
 ## Optional
 
