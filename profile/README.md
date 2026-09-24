@@ -10,5 +10,5 @@ small set of tools to help with osu! tournament organization / production
 
 ### Packages
 
-- [@haruhimemoe on npm](https://www.npmjs.com/org/haruhimemoe): osu! API client, mappool data, tournament rule checks, branding
+- [@haruhimemoe on npm](https://www.npmjs.com/org/haruhimemoe): osu! API client, mappool data, tournament rule checks, beatmap mirror client, UI components, branding
 - [claude-plugin](https://github.com/haruhimemoe/claude-plugin): Claude Code skills for building osu! tools with these packages
