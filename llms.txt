@@ -4,12 +4,13 @@
 
 Two more tools, pools and sheets, are coming soon. Neither has a public site yet.
 
-Every @haruhimemoe package is ESM only and needs Node 22.12 or later.
+Every @haruhimemoe package is ESM only. On Node they need 22.12 or later.
 
 ## Tools
 
 - [packs.haruhime.moe](https://packs.haruhime.moe/): Build osu! mappool packs from beatmap IDs or links, download them as one zip or a torrent, and share them with a pack key or a short link.
 - [packs.haruhime.moe llms.txt](https://packs.haruhime.moe/llms.txt): The packs pages, guides, public packs index and API, in llms.txt format.
+- [packs API](https://packs.haruhime.moe/docs/api.md): Read public packs and manage the packs you saved from your own scripts and bots, with a personal API key.
 - [packs.haruhime.moe source](https://github.com/haruhimemoe/packs.haruhime.moe): The Next.js app behind packs.haruhime.moe.
 
 ## Home page
@@ -23,6 +24,7 @@ Every @haruhimemoe package is ESM only and needs Node 22.12 or later.
 
 - [@haruhimemoe/osu](https://github.com/haruhimemoe/osu): osu! API v2: beatmap, beatmapset and user shapes with zod schemas (browser-safe at `@haruhimemoe/osu/shapes`), and a server client with token caching, a rate-budget hook, beatmaps, beatmapsets and star ratings with mods.
 - [@haruhimemoe/pool](https://github.com/haruhimemoe/pool): osu! tournament mappools as data: slots, mod buckets, custom slots with forced or free mods, zod validation, pure editing helpers, pasted-pool parsing, and the pk1/pk2/pk3 pack key codec.
+- [Pack key format](https://github.com/haruhimemoe/pool/blob/main/docs/pack-key.md): The pk1, pk2 and pk3 pack key spec that @haruhimemoe/pool reads and writes, with the decoder rules.
 - [@haruhimemoe/compliance](https://github.com/haruhimemoe/compliance): Check osu! beatmapsets against the content rules for officially supported osu! tournaments. A port of hburn7/omc-api's rules, with no network and no dependencies.
 - [@haruhimemoe/hinai](https://github.com/haruhimemoe/hinai): Client for the hinai osu! beatmap mirror (mirror.hinamizawa.ai): difficulty metadata, set availability, and streamed .osz downloads with progress, abort and retry hints. Works in browsers and on servers.
 - [@haruhimemoe/ui](https://github.com/haruhimemoe/ui): React components for the haruhime.moe tools on Next.js: the osu!-web-style palette as a Tailwind theme, buttons, cards, form fields, filter controls, and the site header and footer.
@@ -30,11 +32,11 @@ Every @haruhimemoe package is ESM only and needs Node 22.12 or later.
 
 ## npm
 
-- [@haruhimemoe/osu on npm](https://www.npmjs.com/package/@haruhimemoe/osu): Install with `bun add @haruhimemoe/osu zod` (zod 4 is a peer dependency).
-- [@haruhimemoe/pool on npm](https://www.npmjs.com/package/@haruhimemoe/pool): Install with `bun add @haruhimemoe/pool zod` (zod 4 is a peer dependency).
+- [@haruhimemoe/osu on npm](https://www.npmjs.com/package/@haruhimemoe/osu): Install with `bun add @haruhimemoe/osu zod` (zod 4.0.16 or later in 4.x is a peer dependency).
+- [@haruhimemoe/pool on npm](https://www.npmjs.com/package/@haruhimemoe/pool): Install with `bun add @haruhimemoe/pool zod` (zod 4.0.16 or later in 4.x is a peer dependency).
 - [@haruhimemoe/compliance on npm](https://www.npmjs.com/package/@haruhimemoe/compliance): Install with `bun add @haruhimemoe/compliance`. No dependencies.
-- [@haruhimemoe/hinai on npm](https://www.npmjs.com/package/@haruhimemoe/hinai): Install with `bun add @haruhimemoe/hinai zod` (zod 4 is a peer dependency).
-- [@haruhimemoe/ui on npm](https://www.npmjs.com/package/@haruhimemoe/ui): Install with `bun add @haruhimemoe/ui`. Its peers are Next.js 16, React 19 and Tailwind CSS 4 (4.1 or later).
+- [@haruhimemoe/hinai on npm](https://www.npmjs.com/package/@haruhimemoe/hinai): Install with `bun add @haruhimemoe/hinai zod` (zod 4.0.16 or later in 4.x is a peer dependency).
+- [@haruhimemoe/ui on npm](https://www.npmjs.com/package/@haruhimemoe/ui): Install with `bun add @haruhimemoe/ui`. Its peers are Next.js 16, React 19, React DOM 19 and Tailwind CSS 4 (4.1 or later).
 - [@haruhimemoe/brand on npm](https://www.npmjs.com/package/@haruhimemoe/brand): Install as a dev dependency with `bun add -d @haruhimemoe/brand`. Ships the `haruhime-brand` CLI.
 
 ## Claude Code plugin
@@ -44,6 +46,7 @@ Every @haruhimemoe package is ESM only and needs Node 22.12 or later.
 ## Optional
 
 - [GitHub organization](https://github.com/haruhimemoe): Source and issues for every tool and package.
+- [compliance vendored data](https://github.com/haruhimemoe/compliance/blob/main/docs/vendored-data.md): The hburn7/omc-api commit and data files @haruhimemoe/compliance's rules come from, with their hashes.
 - [Organization profile](https://github.com/haruhimemoe/.github/blob/main/profile/README.md): The profile shown on the GitHub organization page.
 - [Thanks](https://www.haruhime.moe/thanks): The people and projects the haruhime.moe tools are built on.
 - [Brand](https://www.haruhime.moe/brand): The haruhime.moe name, logos and colors.
