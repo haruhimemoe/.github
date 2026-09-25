@@ -5,7 +5,7 @@ small set of tools to help with osu! tournament organization / production
 ### Tools
 
 - [packs](https://packs.haruhime.moe): build mappool packs from beatmap IDs or links, then share them with a pack key or short link
-- [pools](https://pools.haruhime.moe): browse past tournament mappools from several sources, search every osu! map with unusable maps left out, see where a map was played before, and check a pool against the content rules (beta)
+- [pools](https://pools.haruhime.moe): browse past tournament mappools from otdb, search the maps they used, see where a map was played before, and check a pool against the content rules (beta)
 - sheets: coming soon
 
 ### Packages
