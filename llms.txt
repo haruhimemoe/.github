@@ -1,8 +1,8 @@
 # haruhimemoe
 
-> haruhimemoe is the GitHub organization behind haruhime.moe, a small set of tools for osu! tournament organization and production. It holds the packs.haruhime.moe pack builder, the haruhime.moe home page, six TypeScript packages published on npm under the @haruhimemoe scope, and a Claude Code plugin of osu! skills.
+> haruhimemoe is the GitHub organization behind haruhime.moe, a small set of tools for osu! tournament organization and production. It holds the packs.haruhime.moe pack builder, the pools.haruhime.moe mappool search (in beta), the haruhime.moe home page, six TypeScript packages published on npm under the @haruhimemoe scope, and a Claude Code plugin of osu! skills.
 
-Two more tools, pools and sheets, are coming soon. Neither has a public site yet.
+One more tool, sheets, is coming soon. It has no public site yet.
 
 Every @haruhimemoe package is ESM only. On Node they need 22.12 or later.
 
@@ -12,6 +12,9 @@ Every @haruhimemoe package is ESM only. On Node they need 22.12 or later.
 - [packs.haruhime.moe llms.txt](https://packs.haruhime.moe/llms.txt): The packs pages, guides, public packs index and API, in llms.txt format.
 - [packs API](https://packs.haruhime.moe/docs/api.md): Read public packs and manage your own from scripts and bots with a personal API key, and look up which archived pools used a map (no key needed).
 - [packs.haruhime.moe source](https://github.com/haruhimemoe/packs.haruhime.moe): The Next.js app behind packs.haruhime.moe.
+- [pools.haruhime.moe](https://pools.haruhime.moe/): Past osu! tournament mappools from several sources, a search over every osu! map with unusable maps left out, where each map was played before, and a check of a pool against the content rules for officially supported tournaments. In beta.
+- [pools.haruhime.moe llms.txt](https://pools.haruhime.moe/llms.txt): The pools pages and where its data comes from, in llms.txt format.
+- [pools.haruhime.moe source](https://github.com/haruhimemoe/pools.haruhime.moe): The Next.js app behind pools.haruhime.moe.
 
 ## Home page
 
@@ -43,6 +46,10 @@ Every @haruhimemoe package is ESM only. On Node they need 22.12 or later.
 ## Claude Code plugin
 
 - [claude-plugin](https://github.com/haruhimemoe/claude-plugin): The `haruhime` Claude Code plugin: skills for the osu! API v2, the content rules and official support for osu! tournaments, mappool data and pack keys, the hinai mirror, packs.haruhime.moe and its API, haruhime.moe branding and UI components (@haruhimemoe/ui), and the @haruhimemoe packages. Install with `/plugin marketplace add haruhimemoe/claude-plugin`, then `/plugin install haruhime@haruhimemoe`.
+
+## Community
+
+- [Discord](https://discord.gg/bKy9kjMV4y): The haruhime.moe Discord server, for questions and feedback about the tools.
 
 ## Optional
 

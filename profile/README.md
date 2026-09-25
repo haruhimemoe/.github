@@ -5,10 +5,14 @@ small set of tools to help with osu! tournament organization / production
 ### Tools
 
 - [packs](https://packs.haruhime.moe): build mappool packs from beatmap IDs or links, then share them with a pack key or short link
-- pools: coming soon
+- [pools](https://pools.haruhime.moe): browse past tournament mappools from several sources, search every osu! map with unusable maps left out, see where a map was played before, and check a pool against the content rules (beta)
 - sheets: coming soon
 
 ### Packages
 
 - [@haruhimemoe on npm](https://www.npmjs.com/org/haruhimemoe): osu! API client, mappool data, tournament rule checks, beatmap mirror client, UI components, branding
 - [claude-plugin](https://github.com/haruhimemoe/claude-plugin): Claude Code skills for building osu! tools with these packages
+
+### Community
+
+- [Discord](https://discord.gg/bKy9kjMV4y): questions and feedback about the tools
