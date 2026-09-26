@@ -12,7 +12,7 @@ Every @haruhimemoe package is ESM only. On Node they need 22.12 or later.
 - [packs.haruhime.moe llms.txt](https://packs.haruhime.moe/llms.txt): The packs pages, guides, public packs index and API, in llms.txt format.
 - [packs API](https://packs.haruhime.moe/docs/api.md): Read public packs and manage your own from scripts and bots with a personal API key.
 - [packs.haruhime.moe source](https://github.com/haruhimemoe/packs.haruhime.moe): The Next.js app behind packs.haruhime.moe.
-- [pools.haruhime.moe](https://pools.haruhime.moe/): Past osu! tournament mappools from otdb, a search over the maps they used, where each map was played before, and a check of a pool against the content rules for officially supported tournaments. In beta.
+- [pools.haruhime.moe](https://pools.haruhime.moe/): Past osu! tournament mappools from tournament hosts, community submissions and otdb, a search over every osu! map that leaves out maps officially supported tournaments can't use, where each map was played before, and a check of a pool against the content rules for officially supported tournaments. In beta.
 - [pools.haruhime.moe llms.txt](https://pools.haruhime.moe/llms.txt): The pools pages and where its data comes from, in llms.txt format.
 - [pools.haruhime.moe source](https://github.com/haruhimemoe/pools.haruhime.moe): The Next.js app behind pools.haruhime.moe.
 
