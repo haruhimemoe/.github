@@ -1,8 +1,8 @@
 # haruhimemoe
 
-> haruhimemoe is the GitHub organization behind haruhime.moe, a small set of tools for osu! tournament organization and production. It holds the packs.haruhime.moe pack builder, the pools.haruhime.moe pool builder (in beta), the haruhime.moe home page, six TypeScript packages published on npm under the @haruhimemoe scope, and a Claude Code plugin of osu! skills.
+> haruhimemoe is the GitHub organization behind haruhime.moe, a small set of osu! tools for players, mappers and tournament hosts. It holds the packs.haruhime.moe pack builder, the pools.haruhime.moe pool builder (in beta), the haruhime.moe home page, eight TypeScript packages published on npm under the @haruhimemoe scope, and a Claude Code plugin of osu! skills.
 
-One more tool, sheets, is coming soon. It has no public site yet.
+Two more tools are coming: bb (bb.haruhime.moe), an osu! BBCode editor with a live preview, templates, flags, colors and a collab (imagemap) maker; and sheets. Neither has a public site yet.
 
 Every @haruhimemoe package is ESM only. On Node they need 22.12 or later.
 
@@ -18,7 +18,7 @@ Every @haruhimemoe package is ESM only. On Node they need 22.12 or later.
 
 ## Home page
 
-- [haruhime.moe](https://www.haruhime.moe/): haruhime's home page: the osu! tournament tools, thanks, the brand kit, a showcase of @haruhimemoe/ui, contact and a disclaimer.
+- [haruhime.moe](https://www.haruhime.moe/): haruhime's home page: the osu! tools, thanks, the brand kit, a showcase of @haruhimemoe/ui, contact and a disclaimer.
 - [haruhime.moe llms.txt](https://www.haruhime.moe/llms.txt): The home page's pages and tools, in llms.txt format.
 - [haruhime.moe source](https://github.com/haruhimemoe/haruhime.moe): The Next.js app behind haruhime.moe.
 - [Contact](https://www.haruhime.moe/contact): Email, the Discord server, GitHub, and how to report a security problem privately.
@@ -34,6 +34,7 @@ Every @haruhimemoe package is ESM only. On Node they need 22.12 or later.
 - [@haruhimemoe/ui showcase](https://www.haruhime.moe/ui): Every @haruhimemoe/ui component in its states, rendered on haruhime.moe from the published package.
 - [@haruhimemoe/brand](https://github.com/haruhimemoe/brand): Brand kit generator: palettes from one hue, Nunito wordmarks, monogram icons and README banners as outlined SVG, and the PNG icons and link previews Next.js serves as static files.
 - [@haruhimemoe/next-kit](https://github.com/haruhimemoe/next-kit): The Next.js server kit packs.haruhime.moe and pools.haruhime.moe share: JSON route helpers, rate limits and budgets in MongoDB, bearer machine auth, zod env parsing, a connect-once MongoDB client, and better-auth with osu! sign-in. On npm: `npm install @haruhimemoe/next-kit`.
+- [@haruhimemoe/bbcode](https://github.com/haruhimemoe/bbcode): osu! BBCode as osu! renders it: a tolerant parser, a safe HTML renderer with its own stylesheet, a linter with fixes, a character counter against osu!'s 60,000 limit, and helpers for colors, gradients, flags, profiles, imagemaps and template fields. No dependencies.
 
 ## npm
 
@@ -43,6 +44,8 @@ Every @haruhimemoe package is ESM only. On Node they need 22.12 or later.
 - [@haruhimemoe/hinai on npm](https://www.npmjs.com/package/@haruhimemoe/hinai): Install with `bun add @haruhimemoe/hinai zod` (zod 4.0.16 or later in 4.x is a peer dependency).
 - [@haruhimemoe/ui on npm](https://www.npmjs.com/package/@haruhimemoe/ui): Install with `bun add @haruhimemoe/ui`. Its peers are Next.js 16, React 19, React DOM 19 and Tailwind CSS 4 (4.1 or later).
 - [@haruhimemoe/brand on npm](https://www.npmjs.com/package/@haruhimemoe/brand): Install as a dev dependency with `bun add -d @haruhimemoe/brand`. Ships the `haruhime-brand` CLI.
+- [@haruhimemoe/next-kit on npm](https://www.npmjs.com/package/@haruhimemoe/next-kit): Install with `bun add @haruhimemoe/next-kit`.
+- [@haruhimemoe/bbcode on npm](https://www.npmjs.com/package/@haruhimemoe/bbcode): Install with `bun add @haruhimemoe/bbcode`. No dependencies.
 
 ## Claude Code plugin
 
