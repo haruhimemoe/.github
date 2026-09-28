@@ -1,0 +1,30 @@
+name: Bug report
+description: Something is broken
+labels: [bug]
+body:
+  - type: textarea
+    id: what
+    attributes:
+      label: What happened?
+      description: What you did, what you expected, what happened instead.
+    validations:
+      required: true
+  - type: textarea
+    id: repro
+    attributes:
+      label: Steps to reproduce
+      description: The smallest steps or code that show it.
+    validations:
+      required: true
+  - type: input
+    id: error
+    attributes:
+      label: Error message (if any)
+  - type: input
+    id: versions
+    attributes:
+      label: Versions and runtime
+      description: The package version, or the browser and OS for a site.
+      placeholder: "@haruhimemoe/osu 0.3.0 on Node 24, or Chrome 140 on macOS"
+    validations:
+      required: true
