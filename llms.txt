@@ -1,6 +1,6 @@
 # haruhimemoe
 
-> haruhimemoe is the GitHub organization behind haruhime.moe, a small set of tools for osu! tournament organization and production. It holds the packs.haruhime.moe pack builder, the pools.haruhime.moe mappool search (in beta), the haruhime.moe home page, six TypeScript packages published on npm under the @haruhimemoe scope, and a Claude Code plugin of osu! skills.
+> haruhimemoe is the GitHub organization behind haruhime.moe, a small set of tools for osu! tournament organization and production. It holds the packs.haruhime.moe pack builder, the pools.haruhime.moe pool builder (in beta), the haruhime.moe home page, six TypeScript packages published on npm under the @haruhimemoe scope, and a Claude Code plugin of osu! skills.
 
 One more tool, sheets, is coming soon. It has no public site yet.
 
@@ -12,8 +12,8 @@ Every @haruhimemoe package is ESM only. On Node they need 22.12 or later.
 - [packs.haruhime.moe llms.txt](https://packs.haruhime.moe/llms.txt): The packs pages, guides, public packs index and API, in llms.txt format.
 - [packs API](https://packs.haruhime.moe/docs/api.md): Read public packs and manage your own from scripts and bots with a personal API key.
 - [packs.haruhime.moe source](https://github.com/haruhimemoe/packs.haruhime.moe): The Next.js app behind packs.haruhime.moe.
-- [pools.haruhime.moe](https://pools.haruhime.moe/): Past osu! tournament mappools from tournament hosts, community submissions and otdb, a search over every osu! map that leaves out maps officially supported tournaments can't use, where each map was played before, and a check of a pool against the content rules for officially supported tournaments. In beta.
-- [pools.haruhime.moe llms.txt](https://pools.haruhime.moe/llms.txt): The pools pages and where its data comes from, in llms.txt format.
+- [pools.haruhime.moe](https://pools.haruhime.moe/): Build an osu! tournament mappool: sign in with osu!, make a pool, search every osu! map under a mod lens (star rating, AR and OD with the mod), add co-editors, check the pool against the content rules for officially supported tournaments, and download it on packs.haruhime.moe. Past tournament pools from tournament hosts, the community and otdb are there as reference, with where each map was played before. In beta.
+- [pools.haruhime.moe llms.txt](https://pools.haruhime.moe/llms.txt): The pools pages, past and public built pools, and the most used maps, in llms.txt format.
 - [pools.haruhime.moe source](https://github.com/haruhimemoe/pools.haruhime.moe): The Next.js app behind pools.haruhime.moe.
 
 ## Home page
@@ -25,14 +25,15 @@ Every @haruhimemoe package is ESM only. On Node they need 22.12 or later.
 
 ## Packages
 
-- [@haruhimemoe/osu](https://github.com/haruhimemoe/osu): osu! API v2: beatmap, beatmapset and user shapes with zod schemas (browser-safe at `@haruhimemoe/osu/shapes`), and a server client with token caching, a rate-budget hook, beatmaps, beatmapsets and star ratings with mods.
-- [@haruhimemoe/pool](https://github.com/haruhimemoe/pool): osu! tournament mappools as data: slots, mod buckets, custom slots with forced or free mods, zod validation, pure editing helpers, pasted-pool parsing, and the pk1/pk2/pk3 pack key codec.
+- [@haruhimemoe/osu](https://github.com/haruhimemoe/osu): osu! API v2: beatmap, beatmapset and user shapes with zod schemas (browser-safe at `@haruhimemoe/osu/shapes`), a server client with token caching, a rate-budget hook, beatmaps, beatmapsets and star ratings with mods, a browser-safe reader and writer for osu!stable's collection.db (at `@haruhimemoe/osu/collections`), and display formatting for beatmap stats (at `@haruhimemoe/osu/format`).
+- [@haruhimemoe/pool](https://github.com/haruhimemoe/pool): osu! tournament mappools as data: slots, mod buckets, custom slots with forced or free mods, zod validation, pure editing helpers, pasted-pool parsing, the pk1/pk2/pk3 pack key codec, a content filter (at `@haruhimemoe/pool/content-filter`), and the packs.haruhime.moe service contract (at `@haruhimemoe/pool/service`).
 - [Pack key format](https://github.com/haruhimemoe/pool/blob/main/docs/pack-key.md): The pk1, pk2 and pk3 pack key spec that @haruhimemoe/pool reads and writes, with the decoder rules.
 - [@haruhimemoe/compliance](https://github.com/haruhimemoe/compliance): Check osu! beatmapsets against the content rules for officially supported osu! tournaments. A port of hburn7/omc-api's rules, with no network and no dependencies.
-- [@haruhimemoe/hinai](https://github.com/haruhimemoe/hinai): Client for the hinai osu! beatmap mirror (mirror.hinamizawa.ai): difficulty metadata, set availability, and streamed .osz downloads with progress, abort and retry hints. Works in browsers and on servers.
-- [@haruhimemoe/ui](https://github.com/haruhimemoe/ui): React components for the haruhime.moe tools on Next.js: the osu!-web-style palette as a Tailwind theme, buttons, cards, form fields, filter controls, and the site header and footer.
+- [@haruhimemoe/hinai](https://github.com/haruhimemoe/hinai): Client for the hinai osu! beatmap mirror (mirror.hinamizawa.ai): difficulty metadata as @haruhimemoe/osu BeatmapMeta, set availability, and streamed .osz downloads with progress, abort and retry hints. Works in browsers and on servers.
+- [@haruhimemoe/ui](https://github.com/haruhimemoe/ui): React components for the haruhime.moe osu! tools on Next.js: the osu!-web-style palette as a Tailwind theme, buttons, cards, form fields and confirms, filter controls, tables, osu! beatmap display pieces, and the site header and footer.
 - [@haruhimemoe/ui showcase](https://www.haruhime.moe/ui): Every @haruhimemoe/ui component in its states, rendered on haruhime.moe from the published package.
 - [@haruhimemoe/brand](https://github.com/haruhimemoe/brand): Brand kit generator: palettes from one hue, Nunito wordmarks, monogram icons and README banners as outlined SVG, and the PNG icons and link previews Next.js serves as static files.
+- @haruhimemoe/next-kit: The Next.js server kit packs.haruhime.moe and pools.haruhime.moe share: JSON route helpers, rate limits and budgets in MongoDB, bearer machine auth, zod env parsing, a connect-once MongoDB client, and better-auth with osu! sign-in. Not on npm yet.
 
 ## npm
 
@@ -45,7 +46,7 @@ Every @haruhimemoe package is ESM only. On Node they need 22.12 or later.
 
 ## Claude Code plugin
 
-- [claude-plugin](https://github.com/haruhimemoe/claude-plugin): The `haruhime` Claude Code plugin: skills for the osu! API v2, the content rules and official support for osu! tournaments, mappool data and pack keys, the hinai mirror, packs.haruhime.moe and its API, haruhime.moe branding and UI components (@haruhimemoe/ui), and the @haruhimemoe packages. Install with `/plugin marketplace add haruhimemoe/claude-plugin`, then `/plugin install haruhime@haruhimemoe`.
+- [claude-plugin](https://github.com/haruhimemoe/claude-plugin): The `haruhime` Claude Code plugin: skills for the osu! API v2, the content rules and official support for osu! tournaments, mappool data and pack keys, the hinai mirror, packs.haruhime.moe and its API, the pools.haruhime.moe pool builder, haruhime.moe branding and UI components (@haruhimemoe/ui), and the @haruhimemoe packages. Install with `/plugin marketplace add haruhimemoe/claude-plugin`, then `/plugin install haruhime@haruhimemoe`.
 
 ## Community
 
