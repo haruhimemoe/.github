@@ -1,8 +1,8 @@
 # haruhimemoe
 
-> haruhimemoe is the GitHub organization behind haruhime.moe, a small set of osu! tools for players, mappers and tournament hosts. It holds the packs.haruhime.moe pack builder, the pools.haruhime.moe pool builder (in beta), the haruhime.moe home page, eight TypeScript packages published on npm under the @haruhimemoe scope, and a Claude Code plugin of osu! skills.
+> haruhimemoe is the GitHub organization behind haruhime.moe, a small set of osu! tools for players, mappers and tournament hosts. It holds the packs.haruhime.moe pack builder, the pools.haruhime.moe pool builder (in beta), the bb.haruhime.moe BBCode editor, the haruhime.moe home page, eight TypeScript packages published on npm under the @haruhimemoe scope, and a Claude Code plugin of osu! skills.
 
-Two more tools are coming: bb (bb.haruhime.moe), an osu! BBCode editor with a live preview, templates, flags, colors and a collab (imagemap) maker; and sheets. Neither has a public site yet.
+One more tool, sheets, is coming soon. It has no public site yet.
 
 Every @haruhimemoe package is ESM only. On Node they need 22.12 or later.
 
@@ -15,6 +15,9 @@ Every @haruhimemoe package is ESM only. On Node they need 22.12 or later.
 - [pools.haruhime.moe](https://pools.haruhime.moe/): Build an osu! tournament mappool: sign in with osu!, make a pool, search every osu! map under a mod lens (star rating, AR and OD with the mod), add co-editors, check the pool against the content rules for officially supported tournaments, and download it on packs.haruhime.moe. Past tournament pools from tournament hosts, the community and otdb are there as reference, with where each map was played before. In beta.
 - [pools.haruhime.moe llms.txt](https://pools.haruhime.moe/llms.txt): The pools pages, past and public built pools, and the most used maps, in llms.txt format.
 - [pools.haruhime.moe source](https://github.com/haruhimemoe/pools.haruhime.moe): The Next.js app behind pools.haruhime.moe.
+- [bb.haruhime.moe](https://bb.haruhime.moe/): An osu! BBCode editor with a live osu!-style preview, lint marks and a character counter against osu!'s 60,000 limit; built-in, personal and public templates with fill-in fields; flags, colors and gradients, a player list from osu! names, a collab (imagemap) maker, and a mappool import from pools.
+- [bb.haruhime.moe llms.txt](https://bb.haruhime.moe/llms.txt): The bb pages, docs (a page per tag and the guides) and templates, in llms.txt format.
+- [bb.haruhime.moe source](https://github.com/haruhimemoe/bb.haruhime.moe): The Next.js app behind bb.haruhime.moe.
 
 ## Home page
 

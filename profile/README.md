@@ -6,7 +6,7 @@ small set of osu! tools for players, mappers and tournament hosts
 
 - [packs](https://packs.haruhime.moe): build mappool packs from beatmap IDs or links, then share them with a pack key or short link
 - [pools](https://pools.haruhime.moe): build a mappool: sign in with osu!, search maps under a mod lens, add co-editors, then download it on packs; past tournament pools from hosts, the community and otdb are there as reference (beta)
-- bb: an osu! BBCode editor with a live preview, templates, flags, colors and a collab maker (coming soon)
+- [bb](https://bb.haruhime.moe): an osu! BBCode editor with a live osu!-style preview, templates, flags, colors and a collab maker
 - sheets: coming soon
 
 ### Packages
