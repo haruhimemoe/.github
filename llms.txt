@@ -33,7 +33,7 @@ Every @haruhimemoe package is ESM only. On Node they need 22.12 or later.
 - [@haruhimemoe/ui](https://github.com/haruhimemoe/ui): React components for the haruhime.moe osu! tools on Next.js: the osu!-web-style palette as a Tailwind theme, buttons, cards, form fields and confirms, filter controls, tables, osu! beatmap display pieces, and the site header and footer.
 - [@haruhimemoe/ui showcase](https://www.haruhime.moe/ui): Every @haruhimemoe/ui component in its states, rendered on haruhime.moe from the published package.
 - [@haruhimemoe/brand](https://github.com/haruhimemoe/brand): Brand kit generator: palettes from one hue, Nunito wordmarks, monogram icons and README banners as outlined SVG, and the PNG icons and link previews Next.js serves as static files.
-- @haruhimemoe/next-kit: The Next.js server kit packs.haruhime.moe and pools.haruhime.moe share: JSON route helpers, rate limits and budgets in MongoDB, bearer machine auth, zod env parsing, a connect-once MongoDB client, and better-auth with osu! sign-in. Not on npm yet.
+- [@haruhimemoe/next-kit](https://github.com/haruhimemoe/next-kit): The Next.js server kit packs.haruhime.moe and pools.haruhime.moe share: JSON route helpers, rate limits and budgets in MongoDB, bearer machine auth, zod env parsing, a connect-once MongoDB client, and better-auth with osu! sign-in. On npm: `npm install @haruhimemoe/next-kit`.
 
 ## npm
 
