@@ -16,4 +16,4 @@ small set of osu! tools for players, mappers and tournament hosts
 
 ### Community
 
-- [Discord](https://discord.gg/bKy9kjMV4y): questions and feedback about the tools
+- [Discord](https://haruhime.moe/discord): questions and feedback about the tools

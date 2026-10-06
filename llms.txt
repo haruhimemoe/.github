@@ -56,7 +56,7 @@ Every @haruhimemoe package is ESM only. On Node they need 22.12 or later.
 
 ## Community
 
-- [Discord](https://discord.gg/bKy9kjMV4y): The haruhime.moe Discord server, for questions and feedback about the tools.
+- [Discord](https://haruhime.moe/discord): The haruhime.moe Discord server, for questions and feedback about the tools.
 
 ## Optional
 

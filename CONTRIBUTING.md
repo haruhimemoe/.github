@@ -4,7 +4,7 @@ This is the default guide for haruhimemoe repositories that don't have their own
 
 ## Before you start
 
-- Ask questions in the [Discord server](https://discord.gg/bKy9kjMV4y) instead of an issue.
+- Ask questions in the [Discord server](https://haruhime.moe/discord) instead of an issue.
 - Report a vulnerability privately, as [`SECURITY.md`](SECURITY.md) says. Not in an issue.
 - For a bug or an idea, open an issue with one of the forms first, so a change doesn't go to waste.
 - Read the repository's `README.md` and, if it has one, `AGENTS.md`. They hold its setup and rules.
