@@ -2,11 +2,18 @@
 
 small set of osu! tools for players, mappers and tournament hosts
 
+### New: harumin
+
+<a href="https://harumin.haruhime.moe"><picture><source media="(prefers-color-scheme: light)" srcset="https://harumin.haruhime.moe/brand/harumin-banner-on-light.svg"><img alt="harumin: the osu! Discord bot" src="https://harumin.haruhime.moe/brand/harumin-banner.svg" width="480"></picture></a>
+
+[harumin](https://harumin.haruhime.moe) is an osu! Discord bot: profiles, recent and top plays with pp, map cards that the channel remembers for later commands, match costs, top play tracking, and cards for packs and pools links. [Add it to your server](https://harumin.haruhime.moe) or [see the commands](https://harumin.haruhime.moe/commands).
+
 ### Tools
 
 - [packs](https://packs.haruhime.moe): build mappool packs from beatmap IDs or links, then share them with a pack key or short link
 - [pools](https://pools.haruhime.moe): build a mappool: sign in with osu!, search maps under a mod lens, add co-editors, then download it on packs; past tournament pools from hosts, the community and otdb are there as reference (beta)
 - [bb](https://bb.haruhime.moe): an osu! BBCode editor with a live osu!-style preview, templates, flags, colors and a collab maker
+- [harumin](https://harumin.haruhime.moe): the osu! Discord bot, set up from its dashboard
 - sheets: coming soon
 
 ### Packages
