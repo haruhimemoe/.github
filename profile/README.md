@@ -14,11 +14,12 @@ small set of osu! tools for players, mappers and tournament hosts
 - [pools](https://pools.haruhime.moe): build a mappool: sign in with osu!, search maps under a mod lens, add co-editors, then download it on packs; past tournament pools from hosts, the community and otdb are there as reference (beta)
 - [bb](https://bb.haruhime.moe): an osu! BBCode editor with a live osu!-style preview, templates, flags, colors and a collab maker
 - [harumin](https://harumin.haruhime.moe): the osu! Discord bot, set up from its dashboard
+- [tourney](https://tourney.haruhime.moe): run an osu! tournament: registration, teams, seeding, the bracket, scheduling from players' availability, and results by hand or from an mp link, with a public page for each edition (beta)
 - sheets: coming soon
 
 ### Packages
 
-- [@haruhimemoe on npm](https://www.npmjs.com/org/haruhimemoe): osu! API client, mappool data, BBCode parser and renderer, tournament rule checks, beatmap mirror client, UI components, branding, Next.js server kit
+- [@haruhimemoe on npm](https://www.npmjs.com/org/haruhimemoe): osu! API client, mappool data, BBCode parser and renderer, tournament brackets and rule checks, beatmap mirror client, UI components, branding, Next.js server kit
 - [claude-plugin](https://github.com/haruhimemoe/claude-plugin): Claude Code skills for building osu! tools with these packages
 
 ### Community
