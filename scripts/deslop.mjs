@@ -51,7 +51,7 @@ for (const d of repos) {
   const missing = GOV.filter((g) => !existsSync(join(dir, g)));
   if (missing.length) f.push(`- **gov missing:** ${missing.join(", ")}`);
 
-  const hits = { long: [], longFn: [], header: [], log: [], todo: [], dash: [], any: [], only: [], ignore: [] };
+  const hits = { long: [], longFn: [], header: [], escaped: [], log: [], todo: [], dash: [], any: [], only: [], ignore: [] };
   for (const file of files) {
     const path = join(dir, file);
     let text;
@@ -68,6 +68,7 @@ for (const d of repos) {
     const lines = text.split("\n");
     if (lines.length > 600) hits.long.push(`${file} (${lines.length})`);
     if (!text.includes("@file") && !/\.config\.|^\.|\/\./.test(file)) hits.header.push(file);
+    if (/\\n \*\s/.test(text.slice(0, text.indexOf("*/")))) hits.escaped.push(file);
     lines.forEach((l, i) => {
       const at = `${file}:${i + 1}`;
       if (/\bconsole\.(log|debug)\(|\bdebugger;/.test(l) && !/scripts\/|bin\//.test(file)) hits.log.push(at);
@@ -91,6 +92,7 @@ for (const d of repos) {
   list("long", "files over 600 lines");
   list("longFn", "top-level blocks over 150 lines");
   list("header", "no @file header");
+  list("escaped", "literal \\n in the file header");
   list("log", "console.log/debugger");
   list("todo", "TODO/FIXME");
   list("only", ".only/.skip in tests");
