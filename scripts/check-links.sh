@@ -5,7 +5,7 @@
 set -u
 cd "$(dirname "$0")/.." || exit 1
 
-files="profile/README.md llms.txt README.md CONTRIBUTING.md SECURITY.md"
+files="profile/README.md llms.txt README.md CONTRIBUTING.md SECURITY.md .github/ISSUE_TEMPLATE/config.yml .github/PULL_REQUEST_TEMPLATE.md"
 fail=0
 
 for url in $(grep -ohE 'https://[^] )>"`]+' $files | sort -u); do

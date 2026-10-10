@@ -28,31 +28,42 @@ Every @haruhimemoe package is ESM only. On Node they need 22.12 or later.
 
 ## Packages
 
-- [@haruhimemoe/osu](https://github.com/haruhimemoe/osu): osu! API v2: beatmap, beatmapset and user shapes with zod schemas (browser-safe at `@haruhimemoe/osu/shapes`), a server client with token caching, a rate-budget hook, beatmaps, beatmapsets and star ratings with mods, a browser-safe reader and writer for osu!stable's collection.db (at `@haruhimemoe/osu/collections`), and display formatting for beatmap stats (at `@haruhimemoe/osu/format`).
-- [@haruhimemoe/pool](https://github.com/haruhimemoe/pool): osu! tournament mappools as data: slots, mod buckets, custom slots with forced or free mods, zod validation, pure editing helpers, pasted-pool parsing, the pk1/pk2/pk3 pack key codec, a content filter (at `@haruhimemoe/pool/content-filter`), and the packs.haruhime.moe service contract (at `@haruhimemoe/pool/service`).
+- [@haruhimemoe/osu](https://github.com/haruhimemoe/osu): osu! API v2 for the haruhime.moe tools: beatmap, beatmapset and user shapes with zod schemas (browser-safe at /shapes), a server client with token caching, a rate-budget hook, beatmaps, beatmapsets, star ratings with mods, users and matches, a browser-safe reader and writer for osu!stable's collection.db (at /collections), display formatting for beatmap stats (at /format), multiplayer matches from mp links with game winners and map wins (at /match), and the osu!lazer tournament client's bracket.json (at /tournament).
+- [@haruhimemoe/pool](https://github.com/haruhimemoe/pool): osu! tournament mappools as data: slots, mod buckets, custom slots with forced or free mods, zod validation, pure editing helpers, pasted-pool parsing, the pk1/pk2/pk3 pack key codec, a content filter, and the packs.haruhime.moe service contract.
 - [Pack key format](https://github.com/haruhimemoe/pool/blob/main/docs/pack-key.md): The pk1, pk2 and pk3 pack key spec that @haruhimemoe/pool reads and writes, with the decoder rules.
-- [@haruhimemoe/compliance](https://github.com/haruhimemoe/compliance): Check osu! beatmapsets against the content rules for officially supported osu! tournaments. A port of hburn7/omc-api's rules, with no network and no dependencies.
-- [@haruhimemoe/hinai](https://github.com/haruhimemoe/hinai): Client for the hinai osu! beatmap mirror (mirror.hinamizawa.ai): difficulty metadata as @haruhimemoe/osu BeatmapMeta, set availability, and streamed .osz downloads with progress, abort and retry hints. Works in browsers and on servers.
-- [@haruhimemoe/ui](https://github.com/haruhimemoe/ui): React components for the haruhime.moe osu! tools on Next.js: the osu!-web-style palette as a Tailwind theme, buttons, cards, form fields and confirms, filter controls, tables, osu! beatmap display pieces, and the site header and footer.
+- [@haruhimemoe/mirror](https://github.com/haruhimemoe/mirror): Downloads osu! beatmapsets (.osz) from whichever public mirror has them: hinai first, then osu.direct, Mino and Sayobot, with failover, per-mirror cooldowns and zip checks. Includes the hinai client (metadata, availability, downloads) and msw test mocks. Browser-first; nothing is hosted or proxied.
+- [@haruhimemoe/compliance](https://github.com/haruhimemoe/compliance): Check osu! beatmapsets against the content rules for officially supported osu! tournaments. A port of hburn7/omc-api's rules, no network and no dependencies.
+- [@haruhimemoe/bbcode](https://github.com/haruhimemoe/bbcode): Parse, render, lint and count osu! BBCode the way osu! does. Safe HTML, template fields, flags, imagemaps and gradients. No dependencies.
+- [@haruhimemoe/tourney](https://github.com/haruhimemoe/tourney): osu! tournaments as data: zod schemas and pure functions for tournaments, brackets, groups, matches, mp links, pick/ban logs, teams, drafts, registration and scheduling.
+- [@haruhimemoe/time](https://github.com/haruhimemoe/time): Timezones, weekly availability, match slot finding, regions and .ics files for tournament and event tools. DST-aware IANA zones through Intl, availability grids stored in UTC, ranked match times with who is free, region locks from country codes. No runtime dependencies; zod 4 as a peer.
+- [@haruhimemoe/invites](https://github.com/haruhimemoe/invites): Invites as consent: zod schemas for invites and their terms, a pure state machine (pending, countered, accepted, declined, withdrawn, cancelled, expired), resend cooldowns, blocks, rate limits, reminder gating and inbox grouping. No dependencies besides zod.
+- [@haruhimemoe/crowdfund](https://github.com/haruhimemoe/crowdfund): Crowdfunding state as data: zod schemas for goals, tiers, donations and refunds, integer minor-unit money math in any currency, goal progress, stretch tiers, top donors that respect anonymity, dedupe, and webhook helpers for Ko-fi, Stripe, PayPal, GitHub Sponsors and Buy Me a Coffee. Never moves money. No dependencies besides zod.
+- [@haruhimemoe/vcs](https://github.com/haruhimemoe/vcs): Revisions, diffs and 3-way merges for JSON documents and text. Line diffs, keyed-list aware JSON diffs, diff3 text merge, structured merge with conflicts, canonical hashing. No dependencies.
+- [@haruhimemoe/ui](https://github.com/haruhimemoe/ui): React components for the haruhime.moe osu! tools on Next.js: the osu!-web-style palette as a Tailwind theme, buttons, cards, form fields and confirms, filter controls, tables, osu! beatmap display pieces and player cards, a command palette, content section tooling, brand pages and the site header and footer.
 - [@haruhimemoe/ui showcase](https://www.haruhime.moe/ui): Every @haruhimemoe/ui component in its states, rendered on haruhime.moe from the published package.
-- [@haruhimemoe/brand](https://github.com/haruhimemoe/brand): Brand kit generator: palettes from one hue, Nunito wordmarks, monogram icons and README banners as outlined SVG, and the PNG icons and link previews Next.js serves as static files.
-- [@haruhimemoe/next-kit](https://github.com/haruhimemoe/next-kit): The Next.js server kit packs.haruhime.moe and pools.haruhime.moe share: JSON route helpers, rate limits and budgets in MongoDB, bearer machine auth, zod env parsing, a connect-once MongoDB client, and better-auth with osu! sign-in. On npm: `npm install @haruhimemoe/next-kit`.
-- [@haruhimemoe/bbcode](https://github.com/haruhimemoe/bbcode): osu! BBCode as osu! renders it: a tolerant parser, a safe HTML renderer with its own stylesheet, a linter with fixes, a character counter against osu!'s 60,000 limit, and helpers for colors, gradients, flags, profiles, imagemaps and template fields. No dependencies.
+- [@haruhimemoe/brand](https://github.com/haruhimemoe/brand): Brand kit generator for the haruhime.moe osu! tools: palettes from one hue, Nunito wordmarks, monogram icons and README banners as outlined SVG, and the PNG icons and link previews Next.js serves as static files.
+- [@haruhimemoe/next-kit](https://github.com/haruhimemoe/next-kit): The Next.js plumbing the haruhime.moe tools share: JSON route helpers, rate limits and budgets in MongoDB, bearer machine auth, zod env parsing, a connect-once MongoDB client with safe index builds, better-auth with osu! sign-in, the signed-in marker and account store for the browser, SEO: metadata, robots.txt, sitemaps, JSON-LD and llms.txt, per-app API keys and the /api/v1 guard, account export/delete fan-out and the identity inbox, and locale negotiation with optional next-intl glue.
+- [@haruhimemoe/hinai](https://github.com/haruhimemoe/hinai): Deprecated and archived. Use `@haruhimemoe/mirror/hinai`.
 
 ## npm
 
-- [@haruhimemoe/osu on npm](https://www.npmjs.com/package/@haruhimemoe/osu): Install with `bun add @haruhimemoe/osu zod` (zod 4.0.16 or later in 4.x is a peer dependency).
-- [@haruhimemoe/pool on npm](https://www.npmjs.com/package/@haruhimemoe/pool): Install with `bun add @haruhimemoe/pool zod` (zod 4.0.16 or later in 4.x is a peer dependency).
+- [@haruhimemoe/osu on npm](https://www.npmjs.com/package/@haruhimemoe/osu): Install with `bun add @haruhimemoe/osu zod` (zod 4 is a peer dependency).
+- [@haruhimemoe/pool on npm](https://www.npmjs.com/package/@haruhimemoe/pool): Install with `bun add @haruhimemoe/pool zod` (zod 4 is a peer dependency).
+- [@haruhimemoe/mirror on npm](https://www.npmjs.com/package/@haruhimemoe/mirror): Install with `bun add @haruhimemoe/mirror zod` (zod 4 is a peer dependency).
 - [@haruhimemoe/compliance on npm](https://www.npmjs.com/package/@haruhimemoe/compliance): Install with `bun add @haruhimemoe/compliance`. No dependencies.
-- [@haruhimemoe/hinai on npm](https://www.npmjs.com/package/@haruhimemoe/hinai): Install with `bun add @haruhimemoe/hinai zod` (zod 4.0.16 or later in 4.x is a peer dependency).
+- [@haruhimemoe/bbcode on npm](https://www.npmjs.com/package/@haruhimemoe/bbcode): Install with `bun add @haruhimemoe/bbcode`. No dependencies.
+- [@haruhimemoe/tourney on npm](https://www.npmjs.com/package/@haruhimemoe/tourney): Install with `bun add @haruhimemoe/tourney zod` (zod 4 is a peer dependency).
+- [@haruhimemoe/time on npm](https://www.npmjs.com/package/@haruhimemoe/time): Install with `bun add @haruhimemoe/time zod` (zod 4 is a peer dependency).
+- [@haruhimemoe/invites on npm](https://www.npmjs.com/package/@haruhimemoe/invites): Install with `bun add @haruhimemoe/invites zod` (zod 4 is a peer dependency).
+- [@haruhimemoe/crowdfund on npm](https://www.npmjs.com/package/@haruhimemoe/crowdfund): Install with `bun add @haruhimemoe/crowdfund zod` (zod 4 is a peer dependency).
+- [@haruhimemoe/vcs on npm](https://www.npmjs.com/package/@haruhimemoe/vcs): Install with `bun add @haruhimemoe/vcs`. No dependencies.
 - [@haruhimemoe/ui on npm](https://www.npmjs.com/package/@haruhimemoe/ui): Install with `bun add @haruhimemoe/ui`. Its peers are Next.js 16, React 19, React DOM 19 and Tailwind CSS 4 (4.1 or later).
 - [@haruhimemoe/brand on npm](https://www.npmjs.com/package/@haruhimemoe/brand): Install as a dev dependency with `bun add -d @haruhimemoe/brand`. Ships the `haruhime-brand` CLI.
-- [@haruhimemoe/next-kit on npm](https://www.npmjs.com/package/@haruhimemoe/next-kit): Install with `bun add @haruhimemoe/next-kit`.
-- [@haruhimemoe/bbcode on npm](https://www.npmjs.com/package/@haruhimemoe/bbcode): Install with `bun add @haruhimemoe/bbcode`. No dependencies.
+- [@haruhimemoe/next-kit on npm](https://www.npmjs.com/package/@haruhimemoe/next-kit): Install with `bun add @haruhimemoe/next-kit zod`. Other peers (mongodb, better-auth, next, react) are optional, per subpath.
 
 ## Claude Code plugin
 
-- [claude-plugin](https://github.com/haruhimemoe/claude-plugin): The `haruhime` Claude Code plugin: skills for the osu! API v2, the content rules and official support for osu! tournaments, mappool data and pack keys, the hinai mirror, packs.haruhime.moe and its API, the pools.haruhime.moe pool builder, haruhime.moe branding and UI components (@haruhimemoe/ui), and the @haruhimemoe packages. Install with `/plugin marketplace add haruhimemoe/claude-plugin`, then `/plugin install haruhime@haruhimemoe`.
+- [claude-plugin](https://github.com/haruhimemoe/claude-plugin): The `haruhime` Claude Code plugin: skills for the osu! API v2, osu! BBCode and `@haruhimemoe/bbcode`, the content rules and official support for osu! tournaments, mappool data and pack keys, the hinai mirror, packs.haruhime.moe and its API, the pools.haruhime.moe pool builder, haruhime.moe branding, UI components and the Next.js server kit, the app and repo standards every haruhime.moe app follows, and the @haruhimemoe packages. Install with `/plugin marketplace add haruhimemoe/claude-plugin`, then `/plugin install haruhime@haruhimemoe`.
 
 ## Community
 
@@ -65,4 +76,4 @@ Every @haruhimemoe package is ESM only. On Node they need 22.12 or later.
 - [Organization profile](https://github.com/haruhimemoe/.github/blob/main/profile/README.md): The profile shown on the GitHub organization page.
 - [Thanks](https://www.haruhime.moe/thanks): The people and projects the haruhime.moe tools are built on.
 - [Brand](https://www.haruhime.moe/brand): The haruhime.moe name, logos and colors.
-- [Disclaimer](https://www.haruhime.moe/disclaimer): No ppy affiliation, third-party terms, and the as-is notice.
+- [Disclaimer](https://www.haruhime.moe/legal/disclaimers): No ppy affiliation, third-party terms, and the as-is notice.

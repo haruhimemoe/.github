@@ -1,6 +1,6 @@
 # AGENTS.md
 
-The haruhimemoe organization's `.github` repository. GitHub shows `profile/README.md` on https://github.com/haruhimemoe and uses this repository's `SECURITY.md`, `CONTRIBUTING.md`, issue forms and pull request template for any org repository that doesn't have its own. There is no code or build. The only check is the link check.
+The haruhimemoe organization's `.github` repository. GitHub shows `profile/README.md` on https://github.com/haruhimemoe and uses this repository's `SECURITY.md`, `CONTRIBUTING.md`, issue forms and pull request template for any org repository that doesn't have its own. There is no app code or build. The only check is the link check.
 
 ## Files
 
@@ -13,6 +13,8 @@ The haruhimemoe organization's `.github` repository. GitHub shows `profile/READM
 - `.github/workflows/links.yml`: runs `scripts/check-links.sh` on push, on pull requests and weekly.
 - `.github/dependabot.yml`: keeps the workflow's pinned action SHAs current.
 - `scripts/check-links.sh`: the link check.
+- `scripts/deslop.mjs`: a local sweep over every haruhimemoe repo cloned side by side (missing governance and CI files, long files, headers, stray logs, em dashes, stale packages; `--deep` adds bun outdated, knip, publint and gitleaks). It writes a Markdown report and changes nothing.
+- `.github/workflows/codeql.yml`, `secrets.yml` and `.gitleaks.toml`: CodeQL and a gitleaks history scan, the same files every haruhimemoe repo carries.
 - `README.md`: a banner, then what this repository holds.
 - `AGENTS.md`, `CLAUDE.md`: notes for AI agents working here.
 - `LICENSE`: MIT.
